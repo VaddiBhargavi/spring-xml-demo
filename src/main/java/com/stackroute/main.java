@@ -18,10 +18,6 @@ public class main {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 
-  Movie mov1= context.getBean("movie1", Movie.class);
-    mov1.movieDisplayInfo();
-    Movie mov2= context.getBean("movie2", Movie.class);
-    mov2.movieDisplayInfo();
         Movie mov3= context.getBean("movie3", Movie.class);
         mov3.movieDisplayInfo();
     }

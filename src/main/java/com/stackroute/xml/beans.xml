@@ -10,8 +10,5 @@
     <constructor-arg name="age" value="22" />
 </bean>
 
-    <!--Property based object injection-->
-  <bean id="movie1" class="com.stackroute.domain.Movie" autowire="byName"> </bean>
-    <bean id="movie2" class="com.stackroute.domain.Movie" autowire="byType"></bean>
     <bean id="movie3" class="com.stackroute.domain.Movie" autowire="constructor"></bean>
 </beans>
