@@ -17,25 +17,16 @@ import org.springframework.core.io.ClassPathResource;
 public class main {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-        Actor act = context.getBean("actor", Actor.class);
-        act.actorDisplayInfo();
-        //using xmlBeanFactory
-        System.out.println("---Using XmlBeanFactory---");
-        BeanFactory factory= new XmlBeanFactory(new ClassPathResource("beans.xml"));
-        Movie movie=(Movie) factory.getBean("movie");
-        movie.movieDisplayInfo();
-        //Using ApplicationContext
-        System.out.println("---Using ApplicationContext---");
-        ApplicationContext context1 = new ClassPathXmlApplicationContext("beans.xml");
-        Movie movie1=context1.getBean("movie", Movie.class);
-        movie1.movieDisplayInfo();
-        //Using BeanDefinitionRegistry and BeanDefinitionReader
-        System.out.println("---Using BeanDefinitionRegistry and BeanDefinitionReader---");
-        DefaultListableBeanFactory factory1 = new DefaultListableBeanFactory();
-        BeanDefinitionRegistry register = new GenericApplicationContext(factory1);
-        BeanDefinitionReader reader = new XmlBeanDefinitionReader(register);
-        reader.loadBeanDefinitions("beans.xml");
-        Movie picture1 = (Movie) factory.getBean("movie");
-        picture1.movieDisplayInfo();
+
+    Movie mov1= context.getBean("movie1", Movie.class);
+    mov1.movieDisplayInfo();
+    Movie mov2= context.getBean("movie2", Movie.class);
+    mov2.movieDisplayInfo();
+        System.out.println(mov1==mov2);
+        System.out.println("------------------------------------");
+    Movie mov3=context.getBean("movie3", Movie.class);
+    mov3.movieDisplayInfo();
+    Movie mov4=context.getBean("movie4",Movie.class);
+    mov4.movieDisplayInfo();
     }
 }

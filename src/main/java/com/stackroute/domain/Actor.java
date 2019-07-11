@@ -5,22 +5,17 @@ public class Actor {
     private String gender;
     private int age;
 
+    public Actor(String name, String gender, int age) {
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
+    }
+
     public void actorDisplayInfo()
     {
         System.out.println("Name=" +name +" "+
                             "Gender=" +gender +" "+
                             "age=" +age);
     }
-    //Create setter methods to set the values to varaibles
-    public void setName(String name) {
-        this.name = name;
-    }
 
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
 }
