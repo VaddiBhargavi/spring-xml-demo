@@ -18,15 +18,11 @@ public class main {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 
-    Movie mov1= context.getBean("movie1", Movie.class);
+  Movie mov1= context.getBean("movie1", Movie.class);
     mov1.movieDisplayInfo();
     Movie mov2= context.getBean("movie2", Movie.class);
     mov2.movieDisplayInfo();
-        System.out.println(mov1==mov2);
-        System.out.println("------------------------------------");
-    Movie mov3=context.getBean("movie3", Movie.class);
-    mov3.movieDisplayInfo();
-    Movie mov4=context.getBean("movie4",Movie.class);
-    mov4.movieDisplayInfo();
+        Movie mov3= context.getBean("movie3", Movie.class);
+        mov3.movieDisplayInfo();
     }
 }
