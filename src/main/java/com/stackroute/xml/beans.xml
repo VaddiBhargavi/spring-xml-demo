@@ -4,7 +4,10 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
     <!--Property based injection-->
+    <bean id="processor" class="com.stackroute.demo.BeanPostProcessorDemoBean" >
+    </bean>
     <bean id="lifecycle" class="com.stackroute.demo.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy">
     </bean>
+
 
 </beans>
