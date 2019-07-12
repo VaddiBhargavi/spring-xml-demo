@@ -1,24 +1,14 @@
 package com.stackroute;
 
-import com.stackroute.domain.Actor;
-import com.stackroute.domain.Movie;
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.support.BeanDefinitionReader;
-import org.springframework.beans.factory.support.BeanDefinitionRegistry;
-import org.springframework.beans.factory.support.DefaultListableBeanFactory;
-import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
-import org.springframework.beans.factory.xml.XmlBeanFactory;
-import org.springframework.context.ApplicationContext;
+import com.stackroute.demo.BeanLifecycleDemoBean;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.context.support.GenericApplicationContext;
-import org.springframework.core.io.ClassPathResource;
-
 
 public class main {
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-
-        Movie mov3= context.getBean("movie3", Movie.class);
-        mov3.movieDisplayInfo();
+        AbstractApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+        //BeanLifecycleDemoBean beanLifecycleDemoBean= (BeanLifecycleDemoBean) context.getBean("lifecycle");
+       //beanLifecycleDemoBean.customInit();
+       context.registerShutdownHook();
     }
 }

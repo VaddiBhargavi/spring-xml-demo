@@ -4,11 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
     <!--Property based injection-->
-<bean id="actor" class="com.stackroute.domain.Actor">
-    <constructor-arg index="0" type="java.lang.String" name="name" value="Bhargavi"  />
-    <constructor-arg name="gender" value="female" />
-    <constructor-arg name="age" value="22" />
-</bean>
+    <bean id="lifecycle" class="com.stackroute.demo.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy">
+    </bean>
 
-    <bean id="movie3" class="com.stackroute.domain.Movie" autowire="constructor"></bean>
 </beans>
