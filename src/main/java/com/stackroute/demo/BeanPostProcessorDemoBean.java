@@ -3,6 +3,7 @@ package com.stackroute.demo;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 
+//Implementing BeanProcessor
 public class BeanPostProcessorDemoBean implements BeanPostProcessor {
 
     @Override
