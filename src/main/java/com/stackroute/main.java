@@ -17,7 +17,8 @@ import org.springframework.core.io.ClassPathResource;
 public class main {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-
+        
+//Displaying Movie class details through Application context
   Movie mov1= context.getBean("movie1", Movie.class);
     mov1.movieDisplayInfo();
     Movie mov2= context.getBean("movie2", Movie.class);
