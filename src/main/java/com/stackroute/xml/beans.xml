@@ -3,14 +3,14 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <!--Property based injection-->
+    <!--Constructor based injection-->
 <bean id="actor" class="com.stackroute.domain.Actor">
     <constructor-arg index="0" type="java.lang.String" name="name" value="Bhargavi"  />
     <constructor-arg name="gender" value="female" />
     <constructor-arg name="age" value="22" />
 </bean>
 
-    <!--Property based object injection-->
+    <!--Implementing autowired-->
   <bean id="movie1" class="com.stackroute.domain.Movie" autowire="byName"> </bean>
     <bean id="movie2" class="com.stackroute.domain.Movie" autowire="byType"></bean>
     <bean id="movie3" class="com.stackroute.domain.Movie" autowire="constructor"></bean>
