@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <!--Property based injection-->
+    <!--Constructor based injection-->
 <bean id="actor1" class="com.stackroute.domain.Actor">
     <constructor-arg index="0" type="java.lang.String" name="name" value="Bhargavi"  />
     <constructor-arg name="gender" value="female" />
@@ -20,7 +20,7 @@
         <constructor-arg name="age" value="24" />
     </bean>
 
-    <!--Property based object injection-->
+    <!--Constructor based object injection-->
     <bean id="movie1" class="com.stackroute.domain.Movie" scope="prototype">
         <constructor-arg name="actor" ref="actor1" />
     </bean>
