@@ -10,7 +10,7 @@ public class Actor {
         this.gender = gender;
         this.age = age;
     }
-
+    //Display information of the actor
     public void actorDisplayInfo()
     {
         System.out.println("Name=" +name +" "+
