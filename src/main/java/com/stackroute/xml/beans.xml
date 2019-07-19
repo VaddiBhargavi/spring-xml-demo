@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <!--Property based injection-->
+    <!--Implementing BeanLifecycleDemoBean by calling customInit and customDestroy methods-->
     <bean id="processor" class="com.stackroute.demo.BeanPostProcessorDemoBean" >
     </bean>
     <bean id="lifecycle" class="com.stackroute.demo.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy">
