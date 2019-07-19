@@ -6,6 +6,7 @@ public class Movie {
     public void setActor(Actor actor) {
         this.actor = actor;
     }
+    //Display details of the actor through Movie which have HAS-A relation
     public void movieDisplayInfo()
     {
         System.out.println("Actor class details");
